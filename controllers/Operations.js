@@ -28,6 +28,7 @@ exports.newEntry = async (req,res) => {
 
 exports.getAllEntry = async (req,res) => {
     try{
+        res.status(200).send("Entry created successfully");
         const user = await listSchema.find({});
         if(!user){
             return res.status(400).json({
