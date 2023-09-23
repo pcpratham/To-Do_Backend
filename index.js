@@ -8,7 +8,7 @@ const operations = require("./routes/operations");
 require("dotenv").config();
 
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 app.use("/api/to-do",operations);
 app.listen(PORT,()=>{
